@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amigos</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amigos</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+  <!-- Tela de início com botão de play -->
+  <div id="tela-inicial">
+    <button id="botao-play">▶️ Entrar e Tocar Música</button>
+  </div>
+
+  <!-- Conteúdo do site -->
+  <div id="conteudo" style="display: none;">
+    <audio id="musica" loop>
+      <source src="./musica/som.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+
     <img src="./imagem/mamaco1.webp">
     <img src="./imagem/macaco2.jpg">
     <img src="./imagem/macaco3.jpg">
@@ -18,14 +31,8 @@
     <img src="./imagem/macaco9.jpeg">
     <img src="./imagem/macaco10.jpg">
 
-    <!-- Dentro do <body>, depois das imagens -->
-<audio id="musica" loop>
-    <source src="./Musica/Toshifumi Hinata – Reflections (Official Music Video).mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio.
-  </audio>
-  
-  <!-- No fim do body -->
-  <script src="script.js"></script>
-  
+</div>
+
+<script src="script.js"></script>
 </body>
-</html>
+</html> 

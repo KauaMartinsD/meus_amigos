@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const botaoPlay = document.getElementById("botao-play");
+  const tela = document.getElementById("tela-inicial");
+  const conteudo = document.getElementById("conteudo");
   const audio = document.getElementById("musica");
 
-  const playAudio = () => {
+  botaoPlay.addEventListener("click", () => {
+    // Toca música
     audio.play().then(() => {
       console.log("Música tocando.");
     }).catch((e) => {
-      console.log("Falha ao tocar música:", e);
+      console.log("Erro ao tocar música:", e);
     });
 
-    // Remove os eventos depois do primeiro toque
-    document.removeEventListener("click", playAudio);
-    document.removeEventListener("touchstart", playAudio);
-  };
-
-  // Espera o primeiro toque do usuário
-  document.addEventListener("click", playAudio);
-  document.addEventListener("touchstart", playAudio);
+    // Some com tela inicial e mostra conteúdo
+    tela.style.display = "none";
+    conteudo.style.display = "block";
+  });
 });
 
 
