@@ -1,21 +1,22 @@
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("musica");
 
-  const playMusic = () => {
+  const playAudio = () => {
     audio.play().then(() => {
       console.log("Música tocando.");
-    }).catch(err => {
-      console.log("Falha ao tocar música:", err);
+    }).catch((e) => {
+      console.log("Falha ao tocar música:", e);
     });
 
     // Remove os eventos depois do primeiro toque
-    document.removeEventListener('click', playMusic);
-    document.removeEventListener('touchstart', playMusic);
+    document.removeEventListener("click", playAudio);
+    document.removeEventListener("touchstart", playAudio);
   };
 
-  // Espera qualquer toque ou clique na tela
-  document.addEventListener('click', playMusic);
-  document.addEventListener('touchstart', playMusic);
+  // Espera o primeiro toque do usuário
+  document.addEventListener("click", playAudio);
+  document.addEventListener("touchstart", playAudio);
 });
+
 
   
